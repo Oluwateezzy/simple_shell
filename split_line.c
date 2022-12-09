@@ -33,4 +33,8 @@ char **split_line(char *line)
 				exit(EXIT_FAILURE);
 			}
 		}
-		token = strtok(NULL)
+		token = strtok(NULL, BUFFER_DELIMITER);
+	}
+	tokens[position] = NULL;
+	return (tokens);
+}

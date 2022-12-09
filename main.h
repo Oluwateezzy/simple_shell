@@ -14,5 +14,6 @@
 void prompt(void);
 char *read_line(void);
 char **split_line(char *line);
+int launch_process(char **args);
 
 #endif
