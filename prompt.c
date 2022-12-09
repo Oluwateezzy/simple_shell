@@ -14,7 +14,7 @@ void prompt()
 		printf("valerie&tobi $ ");
 		line = read_line();
 		args = split_line(line);
-		status = lsh_exec(args);
+		status = execute(args);
 
 		free(line);
 		free(args);
