@@ -1,4 +1,5 @@
 #include "main.h"
+#define BUFFER_DELIMITER " \t\r\n\a"
 /**
  * split_line - split line into tokens
  * @line: line to be splitted

@@ -3,7 +3,7 @@
  * read_line - read line from standard input
  * Return: char
  */
-char *read_line(void)
+char *read_line2(void)
 {
 	int bufsize = 1024;
 	int position = 0;

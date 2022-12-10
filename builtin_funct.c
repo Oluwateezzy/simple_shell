@@ -1,4 +1,11 @@
 #include "main.h"
+
+char *built_in_str[] = {
+	"cd",
+	"help",
+	"exit"
+};
+
 int (*built_in_func[]) (char **) = {
 	&tee_ch_dir,
 	&tee_help_f,

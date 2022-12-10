@@ -3,7 +3,7 @@
  * read_line2 - read line using getline function
  * Return: char *
  */
-char *read_line2(void)
+char *read_line(void)
 {
 	char *line = NULL;
 	ssize_t bufsize = 0;
