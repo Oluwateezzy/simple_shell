@@ -18,5 +18,6 @@ int tee_help_f(char **args);
 int tee_exit_f(char **args);
 int num_builtin();
 int execute(char **args);
+int find_pipe(char *str, char **strpiped);
 
 #endif

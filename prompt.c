@@ -5,22 +5,29 @@
  */
 void prompt()
 {
-	char *line, *parsedArgs[100], *parsed_piped[1000];
-	char **args;
+	char *line, *strpiped[2];
+	char **args, **args2;
 	int status;
-	int exec_flag = 0;
+	int pipe_flag = 0;
 
 	do
 	{
 		printf("valerie&tobi $ ");
 		line = read_line();
-		exec_flag = process_string(#line, parsedArgs, parsed_piped);
-		if (exec_flag == 1)
+		pipe_flag = find_pipe(line, strpiped);
+		if (pipe_flag == 0)
 		{
 			args = split_line(line);
 			status = execute(args);
 		}
-
+		if (pipe_flag == 1)
+		{
+			args = split_line(strpiped[0]);
+			status = execute(args);
+			args2 = split_line(strpiped[1]);
+			status = execute(args2);
+			free(args2);
+		}
 		free(line);
 		free(args);
 	} while(status);

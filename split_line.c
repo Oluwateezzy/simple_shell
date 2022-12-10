@@ -39,3 +39,29 @@ char **split_line(char *line)
 	tokens[position] = NULL;
 	return (tokens);
 }
+
+/**
+ * find_pipe - check and modify piped string
+ * @str: list of command
+ * @strpiped: storage parameter for piped
+ * Return: integer
+ */
+int find_pipe(char *str, char **strpiped)
+{
+	int i;
+
+	for (i = 0; i < 2; i++)
+	{
+		strpiped[i] = strsep(&str, "|");
+		if (strpiped[i] == NULL)
+			break;
+	}
+	if (strpiped[1] == NULL)
+	{
+		return (0);
+	}
+	else
+	{
+		return (1);
+	}
+}
