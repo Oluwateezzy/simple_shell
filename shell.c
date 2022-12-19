@@ -5,10 +5,8 @@
  * @av: incoming character
  * Return: int
  */
-int main(int ac, char *av)
+int main(__attribute__((unused)) int ac, __attribute__((unused)) char **av)
 {
-	(void) ac;
-	(void) av;
 	prompt();
 	return (0);
 }

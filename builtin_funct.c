@@ -40,7 +40,7 @@ int tee_ch_dir(char **args)
  * @args: list of commands
  * Return: integer
  */
-int tee_help_f(char **args)
+int tee_help_f(__attribute__((unused)) char **args)
 {
 	int i;
 
@@ -61,7 +61,7 @@ int tee_help_f(char **args)
  * @args: list of arguments
  * Return: integer
  */
-int tee_exit_f(char **args)
+int tee_exit_f(__attribute__((unused)) char **args)
 {
 	return (0);
 }
