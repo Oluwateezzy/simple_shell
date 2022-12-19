@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * read_line2 - read line using getline function
+ * read_line - read line using getline function
  * Return: char *
  */
 char *read_line(void)

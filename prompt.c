@@ -3,16 +3,15 @@
  * prompt - prompt and wait for the user to type a command
  * Return: void
  */
-void prompt()
+void prompt(void)
 {
 	char *line, *strpiped[2];
 	char **args, **args2;
 	int status;
 	int pipe_flag = 0;
 
-	do
-	{
-		printf("valerie&tobi $ ");
+	do {
+		printf(":)");
 		line = read_line();
 		pipe_flag = find_pipe(line, strpiped);
 		if (pipe_flag == 0)
@@ -30,5 +29,5 @@ void prompt()
 		}
 		free(line);
 		free(args);
-	} while(status);
+	} while (status);
 }

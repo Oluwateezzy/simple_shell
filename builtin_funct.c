@@ -1,11 +1,5 @@
 #include "main.h"
 
-char *built_in_str[] = {
-	"cd",
-	"help",
-	"exit"
-};
-
 int (*built_in_func[]) (char **) = {
 	&tee_ch_dir,
 	&tee_help_f,
@@ -15,13 +9,13 @@ int (*built_in_func[]) (char **) = {
  * num_builtin - length of builtin function
  * Return: integer
  */
-int num_builtin()
+int num_builtin(void)
 {
 	return (sizeof(built_in_str) / sizeof(char *));
 }
 
 /**
- * ch_dir - change directory builtin
+ * tee_ch_dir - change directory builtin
  * @args: list of commands
  * Return: integer
  */
@@ -42,13 +36,14 @@ int tee_ch_dir(char **args)
 }
 
 /**
- * help_f - print help
+ * tee_help_f - print help
  * @args: list of commands
  * Return: integer
  */
 int tee_help_f(char **args)
 {
 	int i;
+
 	printf("Oluwatobiloba & Valerie ALX group project\n");
 	printf("Type program names and list of arguements, and hit enter.\n");
 	printf("The following are built in:\n");
@@ -62,7 +57,7 @@ int tee_help_f(char **args)
 }
 
 /**
- * exit_f - exit function
+ * tee_exit_f - exit function
  * @args: list of arguments
  * Return: integer
  */

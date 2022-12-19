@@ -7,6 +7,11 @@
 #include <fcntl.h>
 #include <sys/wait.h>
 
+static char *built_in_str[] = {
+	"cd",
+	"help",
+	"exit"
+};
 
 void prompt(void);
 char *read_line(void);

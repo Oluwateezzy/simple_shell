@@ -8,7 +8,7 @@
 char **split_line(char *line)
 {
 	int bufsize = 64;
-	char **tokens = malloc(sizeof(char*) * bufsize);
+	char **tokens = malloc(sizeof(char *) * bufsize);
 	char *token;
 	int position = 0;
 
@@ -27,7 +27,7 @@ char **split_line(char *line)
 		if (position >= bufsize)
 		{
 			bufsize += 64;
-			tokens = realloc(tokens, bufsize * sizeof(char*));
+			tokens = realloc(tokens, (bufsize * sizeof(char *)));
 			if (token == NULL)
 			{
 				fprintf(stderr, "memory allocation error in split_line function\n");
