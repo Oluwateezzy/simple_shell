@@ -1,9 +1,14 @@
 #include "main.h"
 
-int (*built_in_func[]) (char **) = {
+int (*built_in_func[6]) (char **) = {
 	&tee_ch_dir,
 	&tee_help_f,
 	&tee_exit_f
+};
+static char *built_in_str[] = {
+	"cd",
+	"help",
+	"exit"
 };
 /**
  * num_builtin - length of builtin function
@@ -11,6 +16,7 @@ int (*built_in_func[]) (char **) = {
  */
 int num_builtin(void)
 {
+
 	return (sizeof(built_in_str) / sizeof(char *));
 }
 

@@ -7,6 +7,11 @@
 int execute(char **args)
 {
 	int i;
+	char *built_in_str[] = {
+		"cd",
+		"help",
+		"exit"
+	};
 
 	if (args[0] == NULL)
 	{
