@@ -52,7 +52,7 @@ int find_pipe(char *str, char **strpiped)
 
 	for (i = 0; i < 2; i++)
 	{
-		strpiped[i] = strsep(&str, ";");
+		strpiped[i] = strsep(&str, "#");
 		if (strpiped[i] == NULL)
 			break;
 	}
